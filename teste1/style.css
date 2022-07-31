@@ -1,0 +1,120 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREC1BOLQbrEGGacc9HooyYW7OPQoja6ZN-qg&usqp=CAU');
+}
+#buttons {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+#bloco {
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    z-index: -2;
+    box-shadow: 0px 0px 50px 5px black;
+}
+#mov {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: lightgray;
+    border: 1px solid black;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    text-align: center;
+}
+button {
+    user-select: none;
+    padding: 10px;
+    font-size: 15px;
+    background-image: linear-gradient(to right, lightblue, blue);
+    border: 1px solid black;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+#dir:hover {
+    animation: aumenta .1s linear forwards;
+}
+#esq:hover {
+    animation: aumenta .1s linear forwards;
+}
+#baixo:hover {
+    animation: aumenta .1s linear forwards;
+}
+#cima:hover {
+    animation: aumenta .1s linear forwards;
+}
+#aum:hover {
+    animation: aumenta .1s linear forwards;
+}
+#aum {
+    width: 150px;
+}
+#cor {
+    position: relative;
+    width: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+    background-image: linear-gradient(to right, lightblue, blue);
+    border: 1px solid black;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+#cores {
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    border-radius: 50%;
+    opacity: 0;
+}
+#colorlabel {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #000;
+    border-radius: 100px;
+    z-index: 1;
+    cursor: pointer;
+    right: 30px;
+    background: white;
+}
+#colorlabel:hover {
+    animation: aumentalabel .1s linear forwards;
+}
+
+
+@keyframes aumenta {
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes aumentalabel {
+    to {
+        transform: scale(1.2);
+    }
+}
